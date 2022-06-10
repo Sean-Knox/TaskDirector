@@ -6,7 +6,7 @@ import logo from './tf-logo.svg'
 
 function log(txt){
     const doLog = false
-    if (doLog){alert(txt)}
+    if (doLog){alert('Log: ' + txt)}
 }
 
 const LoginForm =(props)=>{
