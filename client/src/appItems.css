@@ -1,0 +1,86 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #FAF9F6;
+    color: #2F4F4F;    
+    margin: 0;
+    padding: 0;
+}
+
+.style-ribbon{
+    background-color: #25476D;
+    color: #B5B7BB;
+
+}
+
+.style1{
+    background-color: #B5B7BB;
+}
+
+.style2{
+    background-color: #6B8EB7;
+    color: #FAF9F6;            
+}
+
+.style3{
+    background-color: #AFB1AE;
+}
+
+.style4{
+    background-color: #32527B;
+    color: #FAF9F6;
+}
+
+.style5{
+    background-color: #757575;
+    color: #FAF9F6;
+}
+
+.ribbon{
+    height: 30px;
+    line-height: 30px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content:center;
+    padding: 5px;
+}
+
+.icon{
+    width: 20%;
+    height: 100%;
+    text-align: left;
+}
+
+.title{
+    color: #FAF9F6;
+    width: 60%;
+    text-align: center;
+}
+
+.xprofile{
+    color: #FAF9F6;
+    text-align: right;
+    width: 20%;
+}
+
+.xform-box{
+
+    border: 1px solid #FAF9F6;
+    border-radius: 3px;
+    padding: 5px 5px 0px;
+    margin-top: 5px;
+
+    /* position:relative for .prevBtn and .nextBtn position:absolute; */
+}
+
+.xform-box input, textarea{
+    display: block;
+    width: 300px;
+    padding: 3px;
+    margin: 0 0 10px;
+    border: 1px solid darkslategrey; 
+    border-radius: 3px;
+}
+
+.xform-box textarea{
+    height: 15vh;
+}

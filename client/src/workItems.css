@@ -1,0 +1,126 @@
+.dot {
+  height: 12px;
+  width: 12px;
+  margin: 2px;
+  background-color: lightgray;
+  border: 1px solid black; 
+  border-radius: 7px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.dot-active {
+  background-color: orange;
+}
+
+.dot-complete {
+  background-color: limegreen;
+}
+
+.dot-selected{
+    border-width: 2px;
+    border-radius: 8px;
+}
+
+.indent{
+    padding-left: 60px; 
+}
+
+.work-item{
+    border-style: solid;
+    border-color: darkslategrey;
+    border-width: 1px;
+    border-radius: 3px;
+    display: inline-block;
+    cursor: pointer;
+    padding-left: 3px;
+}
+
+.scope{
+    width: 540px;
+}
+
+.programme{
+
+    width: 480px;
+}
+
+.project{
+    width: 420px;
+}
+
+.job{
+    width: 360px;
+
+}
+
+.task{
+    width: 300px;
+
+
+}
+
+/* Style the caret/arrow */
+.caret {
+
+  float: left;
+  align-items: centre;
+  justify-content: centre;
+  cursor: pointer;
+  user-select: none; /* Prevent text selection */
+}
+
+/* Rotate the caret/arrow icon when clicked on (using JavaScript) */
+.caret-up {
+  transform: rotate(180deg);
+}
+
+
+.status-filter-up{
+    transform: rotate(180deg);
+}
+
+/* Hide the nested list */
+.nested {
+  display: none;
+}
+
+
+/* Show the nested list when the user clicks on the caret/arrow (with JavaScript) */
+.active {
+  display: block;
+}
+
+.modal{
+  display: none;
+  position: absolute;  
+/*   border: 1px solid darkslategrey; 
+  border-radius: 3px; */
+  padding: 0px;
+  margin-left: 0px;
+  width: auto;
+  height: auto;
+}
+
+.modal-open{
+  display: block;          
+}
+
+.modal-dialog{
+  margin: auto;          
+}
+
+.modal-header{
+  display: flex;
+  align-items: center;
+  padding: 0px;   
+}
+
+.workStatus{
+  float: left;
+  display: flex;
+  align-items: center;
+}
+
+
+
