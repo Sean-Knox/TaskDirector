@@ -1,8 +1,9 @@
 import React from 'react'
-import { BrowserRouter as Router, Route, Routes, Link, useNavigate   } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Routes, useNavigate   } from 'react-router-dom'
 import Scope from './workItems'
 import './appItems.css'
-import logo from './tf-logo.svg'
+
+import Navbar from './Navbar';
 
 function log(txt){
     const doLog = false
@@ -203,74 +204,24 @@ export default class App extends React.Component {
 
     render() {
         
-        log('Rendering App')
+        //log('Rendering App')
 
         const {currentUser} = this.state
-        //navbar-dark bg-dark 
 
         return (
             
             <Router>
 
-            
-                <nav className="navbar navbar-expand style-ribbon">
-            
-                    <div className="container-fluid">
-            
-                    <div className="navbar-nav mr-auto" >            
-                        <li className="nav-item">
-                            <Link to={"/Home"} className="nav-link">
-                                <div style={{'width': '30px'}}>
-                                    <img src={logo} className="App-logo" alt="logo"/>
-                                </div>
-                            </Link>                           
-                        </li> 
-                    </div>
+                <Navbar user={currentUser} logOut={this.logOut}/>
 
-                    <div className="navbar-header">Task Director</div>
-
-                  {currentUser ? (
-                    <ul className="nav navbar-nav navbar-right">
-                      
-                      <li >
-                        <Link to={"/Scope"} className="nav-link style-ribbon">{currentUser.first_name}</Link>
-                      </li>
-                      
-                      <li >
-                        <a href="/Home" className="nav-link style-ribbon" onClick={this.logOut}>LogOut</a>
-                      </li>
-                      
-                    </ul>
-                    ) : (
-                    <ul className="nav navbar-nav navbar-right">
-                      
-                      <li>
-                        <Link to={"/Login"} className="nav-link style-ribbon">Login</Link>
-                      </li>
-                      
-                      <li>
-                        <Link to={"/Register"} className="nav-link style-ribbon">Register</Link>
-                      </li>
-                      
-                    </ul>
-                  )}
-                </div>
-                </nav>
-
-        
-
-                <div className="container mt-3">
-                  <Routes>
+                <Routes>
                     <Route exact path="/" element={<Home/>} />
                     <Route path="/Home" element={<Home/>} />
                     <Route path="/Login" element={<LoginForm onSubmit={this.handleLogin} />} />
                     <Route path="/Register" element={<Register/>} />
                     <Route path="/Scope" element={<Scope/>} />
-                  </Routes>
-                </div>
-            
-
-
+                </Routes>
+        
             </Router>
           )
     }
